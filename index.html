@@ -1,0 +1,195 @@
+Claro! Aqui está o código completo e otimizado do seu blog de notícias, incluindo melhorias na estrutura, acessibilidade, SEO e botões de compartilhamento funcionando corretamente:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Notícias Atualizadas">
+    <meta name="keywords" content="notícias, política, tecnologia, atualizações">
+    <meta property="og:title" content="Blog News">
+    <meta property="og:description" content="Fique por dentro das últimas notícias!">
+    <meta property="og:image" content="URL_DA_IMAGEM_DESTAQUE">
+    <meta property="og:url" content="https://www.seublog.com">
+
+    <title>Blog News</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #cc0000;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background: #b30000;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Barra de Busca */
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        /* Layout Responsivo */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 70%;
+            min-width: 300px;
+        }
+
+        .sidebar {
+            flex: 30%;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Post */
+        .post {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .post img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            loading: lazy;
+        }
+
+        /* Botões de Compartilhamento */
+        .social-share button {
+            background: #0077cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .search-bar {
+                justify-content: center;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📰 Blog News</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar notícias...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/politica">Política</a>
+        <a href="/tecnologia">Tecnologia</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <article class="post">
+                <h2>Título da Notícia Principal</h2>
+                <p class="post-date">Publicado em: 15/10/2023</p>
+                <img src="URL_DA_IMAGEM" alt="Descrição da imagem da notícia">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <div class="social-share">
+                    <button onclick="shareOnFacebook()">Compartilhar no Facebook</button>
+                    <button onclick="shareOnTwitter()">Compartilhar no Twitter</button>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Últimas Notícias</h3>
+            <div class="recent-post">
+                <h4>Título da Notícia Recente</h4>
+                <p>Resumo curto...</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2025 Blog News - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnTwitter() {
+            const text = encodeURIComponent(document.title);
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+        }
+    </script>
+</body>
+</html>
+
+
+✅ Agora, todos os botões de compartilhamento funcionam corretamente.
+✅ O blog está otimizado para desempenho, responsividade e SEO.
+✅ Melhorias na estrutura do CSS para maior flexibilidade e compatibilidade.
+Testa e me diz se ficou do jeito que queria! 🚀😃
