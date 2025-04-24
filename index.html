@@ -1,16 +1,16 @@
-Claro! Aqui está o código completo e otimizado do seu blog de notícias, incluindo melhorias na estrutura, acessibilidade, SEO e botões de compartilhamento funcionando corretamente:
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Meta tag de verificação da HilltopAds -->
+    <meta name="fd53afbaae19891c3fe995930ea6e930c8699dba" content="fd53afbaae19891c3fe995930ea6e930c8699dba" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog de Notícias Atualizadas">
-    <meta name="keywords" content="notícias, política, tecnologia, atualizações">
+    <!-- SEO -->
     <meta property="og:title" content="Blog News">
-    <meta property="og:description" content="Fique por dentro das últimas notícias!">
     <meta property="og:image" content="URL_DA_IMAGEM_DESTAQUE">
-    <meta property="og:url" content="https://www.seublog.com">
-
+    
     <title>Blog News</title>
     <style>
         /* Estilos Gerais */
@@ -21,36 +21,31 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
             font-family: Arial, sans-serif;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho Vermelho */
         header {
             background: #cc0000;
             padding: 20px;
             color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
-        /* Barra de Navegação */
         nav {
             background: #b30000;
             padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+            margin-top: 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
         }
 
         /* Barra de Busca */
         .search-bar {
-            display: flex;
-            gap: 10px;
+            float: right;
+            margin-top: -40px;
         }
 
         .search-bar input {
@@ -59,17 +54,15 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
             border: none;
         }
 
-        /* Layout Responsivo */
+        /* Layout Principal */
         .container {
             display: flex;
-            flex-wrap: wrap;
             margin: 20px;
             gap: 30px;
         }
 
         .main-content {
             flex: 70%;
-            min-width: 300px;
         }
 
         .sidebar {
@@ -79,29 +72,34 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
             border-radius: 8px;
         }
 
-        /* Post */
+        /* Posts */
         .post {
-            background: white;
+            margin-bottom: 40px;
             padding: 20px;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .post img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 8px;
-            loading: lazy;
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+            margin: 10px 0;
         }
 
-        /* Botões de Compartilhamento */
-        .social-share button {
-            background: #0077cc;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        /* Comentários */
+        #comments-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #e9e9e9;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
         }
 
         /* Rodapé */
@@ -113,19 +111,25 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
             margin-top: 50px;
         }
 
-        /* Responsividade */
+        /* Responsivo */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-
+            
             .search-bar {
-                justify-content: center;
+                float: none;
+                margin-top: 15px;
+                text-align: center;
             }
 
             nav {
-                flex-direction: column;
-                align-items: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
@@ -137,30 +141,49 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
             <input type="text" placeholder="Buscar notícias...">
             <button>🔍</button>
         </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/politica">Política</a>
+            <a href="/tecnologia">Tecnologia</a>
+            <a href="/contato">Contato</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/politica">Política</a>
-        <a href="/tecnologia">Tecnologia</a>
-        <a href="/contato">Contato</a>
-    </nav>
-
     <div class="container">
+        <!-- Conteúdo Principal -->
         <main class="main-content">
             <article class="post">
                 <h2>Título da Notícia Principal</h2>
                 <p class="post-date">Publicado em: 15/10/2023</p>
-                <img src="URL_DA_IMAGEM" alt="Descrição da imagem da notícia">
+                <img src="URL_DA_IMAGEM" alt="Imagem da Notícia" style="width:100%; max-width:600px;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                 <div class="social-share">
                     <button onclick="shareOnFacebook()">Compartilhar no Facebook</button>
                     <button onclick="shareOnTwitter()">Compartilhar no Twitter</button>
                 </div>
             </article>
+
+            <!-- Seção de Comentários -->
+            <div id="comments-section">
+                <h3>Comentários (2)</h3>
+                <div class="comment">
+                    <p><strong>João Silva:</strong> Ótima notícia!</p>
+                </div>
+                <form id="comment-form">
+                    <textarea placeholder="Deixe seu comentário..." rows="4"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </main>
 
+        <!-- Sidebar -->
         <aside class="sidebar">
+            <div class="newsletter">
+                <h3>Receba Notícias!</h3>
+                <input type="email" placeholder="Seu melhor email">
+                <button>Assinar</button>
+            </div>
+
             <h3>Últimas Notícias</h3>
             <div class="recent-post">
                 <h4>Título da Notícia Recente</h4>
@@ -169,27 +192,46 @@ Claro! Aqui está o código completo e otimizado do seu blog de notícias, inclu
         </aside>
     </div>
 
+    <!-- Rodapé -->
     <footer>
-        <p>© 2025 Blog News - Todos os direitos reservados</p>
+        <p>© 2023 Blog News - Todos os direitos reservados</p>
+        <p>Siga-nos nas redes sociais: [Ícones]</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // Funções de Compartilhamento
         function shareOnFacebook() {
-            const url = encodeURIComponent(window.location.href);
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
         }
 
         function shareOnTwitter() {
-            const text = encodeURIComponent(document.title);
-            const url = encodeURIComponent(window.location.href);
-            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '%20' + encodeURIComponent(window.location.href));
         }
+
+        // Comentários (simulação)
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Comentário enviado com sucesso! (Simulação)');
+        });
+
+        // Google Analytics (substitua UA-XXXXX-Y pelo seu ID)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
+
+    <!-- Integração com Disqus (opcional) -->
+    <!-- Substitua 'seu-shortname' pelo seu nome de usuário Disqus -->
+    <div id="disqus_thread"></div>
+    <script>
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://seu-shortname.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
     </script>
 </body>
 </html>
-
-
-✅ Agora, todos os botões de compartilhamento funcionam corretamente.
-✅ O blog está otimizado para desempenho, responsividade e SEO.
-✅ Melhorias na estrutura do CSS para maior flexibilidade e compatibilidade.
-Testa e me diz se ficou do jeito que queria! 🚀😃
